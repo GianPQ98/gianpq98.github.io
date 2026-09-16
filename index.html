@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gian Palomino — Performance Marketing Specialist</title>
+<meta name="description" content="Paid Search & Paid Social specialist — Google Ads, Meta Ads, Microsoft Ads, SA360. Portfolio, experience and case studies.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --bg:#F4F6F6;
+    --panel:#FFFFFF;
+    --panel-2:#EEF1F1;
+    --ink:#11161B;
+    --ink-muted:#54626B;
+    --ink-faint:#88949C;
+    --border:#DBE1E3;
+    --border-strong:#B9C2C6;
+    --accent:#E9551F;
+    --accent-ink:#FFFFFF;
+    --accent-2:#136B64;
+    --accent-2-bg:#E4EFEE;
+    --accent-bg:#FDEAE1;
+    --shadow: 0 1px 0 rgba(17,22,27,0.04);
+    --maxw: 1080px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12161B;
+      --panel:#171C22;
+      --panel-2:#1D2329;
+      --ink:#ECEEEA;
+      --ink-muted:#9AA6AD;
+      --ink-faint:#69747C;
+      --border:#2A323A;
+      --border-strong:#3A444D;
+      --accent:#FF7A3D;
+      --accent-ink:#12161B;
+      --accent-2:#54D6C9;
+      --accent-2-bg:#17302E;
+      --accent-bg:#2C1E15;
+      --shadow: 0 1px 0 rgba(0,0,0,0.2);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12161B;
+    --panel:#171C22;
+    --panel-2:#1D2329;
+    --ink:#ECEEEA;
+    --ink-muted:#9AA6AD;
+    --ink-faint:#69747C;
+    --border:#2A323A;
+    --border-strong:#3A444D;
+    --accent:#FF7A3D;
+    --accent-ink:#12161B;
+    --accent-2:#54D6C9;
+    --accent-2-bg:#17302E;
+    --accent-bg:#2C1E15;
+    --shadow: 0 1px 0 rgba(0,0,0,0.2);
+  }
+
+  *{box-sizing:border-box;}
+  html{ background:var(--bg); }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:var(--accent); color:var(--accent-ink); }
+
+  h1,h2,h3{
+    font-family:'Archivo', ui-sans-serif, system-ui, sans-serif;
+    font-weight:800;
+    letter-spacing:-0.01em;
+    text-wrap:balance;
+    margin:0;
+    color:var(--ink);
+  }
+  .mono{ font-family:'IBM Plex Mono', ui-monospace, monospace; }
+  .tnum{ font-variant-numeric: tabular-nums; }
+
+  a{ color:inherit; }
+
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:24px; }
+  .prose{ max-width:700px; }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:40;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    height:56px; gap:16px;
+  }
+  .brand{
+    font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:13px;
+    letter-spacing:0.02em; white-space:nowrap;
+    display:flex; align-items:center; gap:8px;
+  }
+  .brand .dot{ width:7px; height:7px; border-radius:50%; background:var(--accent); flex:none; }
+  nav.links{ display:flex; gap:22px; overflow-x:auto; scrollbar-width:none; }
+  nav.links::-webkit-scrollbar{ display:none; }
+  nav.links a{
+    text-decoration:none; color:var(--ink-muted); font-size:13px; font-weight:500;
+    font-family:'IBM Plex Mono', monospace; white-space:nowrap;
+    padding-block:4px; border-bottom:2px solid transparent;
+  }
+  nav.links a:hover{ color:var(--ink); border-color:var(--border-strong); }
+  .status-pill{
+    display:flex; align-items:center; gap:6px; flex:none;
+    font-family:'IBM Plex Mono', monospace; font-size:11px; font-weight:600;
+    letter-spacing:0.04em; text-transform:uppercase;
+    color:var(--accent-2); background:var(--accent-2-bg);
+    border:1px solid var(--accent-2); border-radius:100px;
+    padding:5px 10px 5px 8px; white-space:nowrap;
+  }
+  .status-pill .pulse{
+    width:6px; height:6px; border-radius:50%; background:var(--accent-2);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{ padding-block:56px 36px; border-bottom:1px solid var(--border); }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--accent);
+    display:flex; align-items:center; gap:10px; margin-bottom:16px;
+  }
+  .eyebrow::before{ content:''; width:22px; height:1px; background:var(--accent); }
+  .hero h1{ font-size:clamp(34px, 5.5vw, 58px); line-height:1.04; }
+  .hero .role{
+    font-family:'Archivo', sans-serif; font-weight:700; font-size:clamp(17px,2.2vw,22px);
+    color:var(--ink-muted); margin-top:14px;
+  }
+  .hero p.lede{
+    margin-top:18px; max-width:640px; color:var(--ink-muted); font-size:16.5px;
+  }
+  .hero .ctas{ display:flex; gap:12px; margin-top:28px; flex-wrap:wrap; }
+  .btn{
+    font-family:'IBM Plex Mono', monospace; font-size:13px; font-weight:600;
+    padding:11px 18px; border-radius:2px; text-decoration:none; display:inline-flex;
+    align-items:center; gap:8px; letter-spacing:0.02em; border:1px solid transparent;
+  }
+  .btn-primary{ background:var(--accent); color:var(--accent-ink); }
+  .btn-primary:hover{ opacity:0.88; }
+  .btn-ghost{ border-color:var(--border-strong); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--ink); }
+
+  /* metrics strip */
+  .metrics{
+    margin-top:40px; border:1px solid var(--border); border-radius:3px;
+    display:grid; grid-template-columns:repeat(5, 1fr); background:var(--panel);
+    box-shadow:var(--shadow);
+  }
+  .metric{
+    padding:16px 14px; border-right:1px solid var(--border);
+  }
+  .metric:last-child{ border-right:none; }
+  .metric .n{ font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:clamp(18px,2.6vw,26px); }
+  .metric .l{
+    margin-top:4px; font-family:'IBM Plex Mono', monospace; font-size:10.5px;
+    letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-faint);
+  }
+  @media (max-width:720px){
+    .metrics{ grid-template-columns:repeat(2,1fr); }
+    .metric{ border-bottom:1px solid var(--border); }
+    .metric:nth-child(2n){ border-right:none; }
+  }
+
+  /* ---------- SECTION SCAFFOLD ---------- */
+  section{ padding-block:56px; border-bottom:1px solid var(--border); }
+  section:last-of-type{ border-bottom:none; }
+  .sec-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:30px; flex-wrap:wrap; }
+  .sec-num{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-faint);
+    letter-spacing:0.08em;
+  }
+  .sec-head h2{ font-size:clamp(24px,3vw,32px); }
+  .sec-sub{ color:var(--ink-muted); max-width:620px; margin-top:8px; font-size:15px; }
+
+  /* about */
+  .about-grid{ display:grid; grid-template-columns:1.5fr 1fr; gap:48px; }
+  .about-grid p{ color:var(--ink-muted); margin:0 0 14px; }
+  .about-grid p:last-child{ margin-bottom:0; }
+  .fact-card{
+    border:1px solid var(--border); border-radius:3px; padding:18px; background:var(--panel);
+  }
+  .fact-card + .fact-card{ margin-top:14px; }
+  .fact-card .k{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px;
+  }
+  .fact-card .v{ font-size:14.5px; }
+  .fact-card .v span{ display:block; color:var(--ink-muted); font-size:13px; margin-top:2px;}
+  @media (max-width:800px){ .about-grid{ grid-template-columns:1fr; } }
+
+  /* services */
+  .svc-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+  .svc{ background:var(--panel); padding:22px 20px; }
+  .svc .idx{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--accent); }
+  .svc h3{ font-size:17px; margin-top:10px; font-weight:700; }
+  .svc p{ color:var(--ink-muted); font-size:13.8px; margin-top:8px; }
+  @media (max-width:800px){ .svc-grid{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .svc-grid{ grid-template-columns:1fr; } }
+
+  /* platforms */
+  .plat-group{ margin-bottom:26px; }
+  .plat-group:last-child{ margin-bottom:0; }
+  .plat-group .gl{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--ink-faint); margin-bottom:10px;
+  }
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; }
+  .chip{
+    border:1px solid var(--border-strong); border-radius:100px; padding:7px 13px;
+    font-size:13px; font-weight:500; display:flex; align-items:center; gap:7px;
+    background:var(--panel);
+  }
+  .chip .sw{ width:7px; height:7px; border-radius:2px; flex:none; }
+
+  /* experience */
+  .job{ display:grid; grid-template-columns:220px 1fr; gap:24px; padding-block:26px; border-top:1px solid var(--border); }
+  .job:first-of-type{ border-top:none; }
+  .job .when{ font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--ink-faint); }
+  .job .role{ font-weight:700; font-size:17px; margin-top:4px; }
+  .job .org{ color:var(--ink-muted); font-size:13.5px; margin-top:2px; }
+  .job ul{ margin:12px 0 0; padding-left:18px; color:var(--ink-muted); font-size:14.5px; }
+  .job li{ margin-bottom:6px; }
+  .job .tag{
+    display:inline-block; margin-top:10px; font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase; color:var(--accent);
+    background:var(--accent-bg); border:1px solid var(--accent); border-radius:100px; padding:3px 9px;
+  }
+  @media (max-width:680px){ .job{ grid-template-columns:1fr; gap:6px; } }
+
+  .more-roles{ margin-top:8px; }
+  .more-roles summary{
+    cursor:pointer; font-family:'IBM Plex Mono', monospace; font-size:12.5px;
+    color:var(--ink-muted); padding:14px 0; list-style:none;
+    display:flex; align-items:center; gap:8px;
+  }
+  .more-roles summary::-webkit-details-marker{ display:none; }
+  .more-roles summary::before{ content:'+'; color:var(--accent); font-weight:700; }
+  .more-roles[open] summary::before{ content:'–'; }
+  .more-job{ padding:14px 0; border-top:1px solid var(--border); }
+  .more-job .role{ font-weight:600; font-size:14.5px; }
+  .more-job .org{ color:var(--ink-muted); font-size:13px; margin-top:2px; }
+  .more-job .when{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-faint); margin-top:2px;}
+  .more-job p{ color:var(--ink-muted); font-size:13.5px; margin-top:8px; }
+
+  /* case studies */
+  .cs{
+    border:1px solid var(--border); border-radius:3px; background:var(--panel);
+    margin-bottom:20px; overflow:hidden;
+  }
+  .cs:last-child{ margin-bottom:0; }
+  .cs-head{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:16px;
+    padding:20px 22px; border-bottom:1px solid var(--border); flex-wrap:wrap;
+  }
+  .cs-head h3{ font-size:18px; }
+  .cs-status{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.05em;
+    text-transform:uppercase; border-radius:100px; padding:4px 10px; white-space:nowrap;
+    border:1px solid var(--border-strong); color:var(--ink-muted);
+  }
+  .cs-fields{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border);
+  }
+  .cs-field{ background:var(--panel); padding:16px 22px; }
+  .cs-field .k{ font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-faint); }
+  .cs-field .v{ margin-top:5px; font-size:13.8px; }
+  .cs-body{ padding:20px 22px; color:var(--ink-muted); font-size:14.5px; }
+  .cs-body p{ margin:0 0 12px; }
+  .cs-body p:last-child{ margin-bottom:0; }
+  .cs-quote{
+    font-style:italic; color:var(--ink); border-left:2px solid var(--accent);
+    padding-left:12px; margin:12px 0; font-size:14px;
+  }
+  .cs-note{
+    display:flex; gap:10px; align-items:flex-start; background:var(--accent-bg);
+    border-top:1px solid var(--border); padding:14px 22px; font-size:13px; color:var(--ink-muted);
+  }
+  .cs-note .flag{ font-family:'IBM Plex Mono', monospace; color:var(--accent); font-weight:600; flex:none; }
+  @media (max-width:760px){ .cs-fields{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:480px){ .cs-fields{ grid-template-columns:1fr; } }
+
+  /* approach */
+  .approach{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .ap-step{ border:1px solid var(--border); border-radius:3px; padding:16px; background:var(--panel); }
+  .ap-step .n{ font-family:'IBM Plex Mono', monospace; color:var(--accent); font-size:12px; }
+  .ap-step h4{ font-family:'Archivo',sans-serif; font-size:14.5px; font-weight:700; margin-top:8px; }
+  .ap-step p{ font-size:12.8px; color:var(--ink-muted); margin-top:6px; }
+  @media (max-width:800px){ .approach{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:480px){ .approach{ grid-template-columns:1fr; } }
+
+  /* education / certs */
+  .edu-cert{ display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+  .edu-item{ padding-block:14px; border-top:1px solid var(--border); }
+  .edu-item:first-child{ border-top:none; padding-top:0; }
+  .edu-item .role{ font-weight:700; font-size:14.5px; }
+  .edu-item .org{ color:var(--ink-muted); font-size:13px; margin-top:2px; }
+  .edu-item .when{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-faint); margin-top:2px; }
+  .cert-item{
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+    padding-block:13px; border-top:1px solid var(--border);
+  }
+  .cert-item:first-child{ border-top:none; padding-top:0; }
+  .cert-item .name{ font-size:13.8px; font-weight:500; }
+  .cert-item .issuer{ font-size:12px; color:var(--ink-muted); margin-top:2px; }
+  .cert-item .date{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--accent-2); white-space:nowrap; text-align:right; }
+  @media (max-width:800px){ .edu-cert{ grid-template-columns:1fr; gap:8px; } }
+
+  /* why */
+  .why-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:3px; overflow:hidden; }
+  .why-item{ background:var(--panel); padding:20px 22px; display:flex; gap:14px; }
+  .why-item .mk{ font-family:'IBM Plex Mono', monospace; color:var(--accent-2); font-weight:600; font-size:13px; flex:none; }
+  .why-item h4{ font-family:'Archivo',sans-serif; font-size:15px; font-weight:700; }
+  .why-item p{ font-size:13.3px; color:var(--ink-muted); margin-top:5px; }
+  @media (max-width:700px){ .why-grid{ grid-template-columns:1fr; } }
+
+  /* contact */
+  .contact{
+    display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:start;
+  }
+  .contact h2{ font-size:clamp(26px,4vw,38px); }
+  .contact .lede{ color:var(--ink-muted); margin-top:14px; max-width:480px; }
+  .contact-card{ border:1px solid var(--border); border-radius:3px; background:var(--panel); padding:22px; }
+  .contact-row{ display:flex; justify-content:space-between; gap:12px; padding-block:12px; border-top:1px solid var(--border); font-size:13.8px; }
+  .contact-row:first-child{ border-top:none; padding-top:0; }
+  .contact-row .k{ color:var(--ink-faint); font-family:'IBM Plex Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:0.05em; }
+  .contact-row a{ text-decoration:none; font-weight:500; }
+  .contact-row a:hover{ color:var(--accent); }
+  @media (max-width:760px){ .contact{ grid-template-columns:1fr; } }
+
+  footer{ padding-block:26px; }
+  footer .wrap{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  footer p{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--ink-faint); margin:0; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="brand"><span class="dot"></span>GIAN PALOMINO</div>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#work">Do</a>
+      <a href="#platforms">Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <span class="status-pill"><span class="pulse"></span>Open to roles</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Performance Marketing Specialist</div>
+      <h1>Paid Search &amp; Paid Social,<br>run the way platforms report it.</h1>
+      <div class="role">Google Ads · Meta Ads · Microsoft Ads · SA360 · TikTok Ads</div>
+      <p class="lede">Trained on enterprise search accounts inside a global agency network, and independently proven across 28 freelance engagements for clients in the US, Europe and Australia. Native Spanish, advanced English &amp; Italian, working Portuguese — built to run campaigns across markets and time zones.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="mailto:gpalominoq@pucp.edu.pe">Get in touch →</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/gian-p-3818b015b/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://www.upwork.com/freelancers/~019e53375666251375" target="_blank" rel="noopener">Upwork profile</a>
+      </div>
+
+      <div class="metrics">
+        <div class="metric"><div class="n tnum">4+ yrs</div><div class="l">Performance Marketing</div></div>
+        <div class="metric"><div class="n tnum">28</div><div class="l">Upwork Engagements</div></div>
+        <div class="metric"><div class="n tnum">100%</div><div class="l">Job Success Score</div></div>
+        <div class="metric"><div class="n tnum">5</div><div class="l">Active 2026 Certifications</div></div>
+        <div class="metric"><div class="n tnum">4</div><div class="l">Working Languages</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num mono">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="prose">
+          <p>Gian is a performance marketing specialist with 4+ years of experience across agency, in-house and freelance settings. He currently works as a Paid Search Analyst at Publicis Global Delivery (PGD), managing Google Ads, Microsoft Ads and SA360 accounts — and has separately, independently delivered 28 completed Meta and Google Ads engagements for clients across the US, Europe and Australia through Upwork, holding a 100% Job Success score across that history.</p>
+          <p>He holds a Master's degree in Digital Marketing from the European University of Madrid (UEM) and a Bachelor's degree in Business Management from Pontificia Universidad Católica del Perú (PUCP), with an additional specialization in Neuromarketing from Centrum PUCP. Before moving into paid media, he spent over a year in Transfer Pricing at EY, building an analytical foundation in financial benchmarking and documentation that now shows up in how he reads campaign data and builds client reporting.</p>
+          <p>Native Spanish speaker with advanced English and Italian and working Portuguese, Gian has studied and worked across Peru, Spain and Colombia, and is used to running campaigns and client relationships across markets and time zones.</p>
+        </div>
+        <div>
+          <div class="fact-card">
+            <div class="k">Currently</div>
+            <div class="v">Paid Search Analyst<span>Publicis Global Delivery (PGD) — Remote, since Mar 2025</span></div>
+          </div>
+          <div class="fact-card">
+            <div class="k">Based in</div>
+            <div class="v">Lima, Peru (GMT-5)<span>Prior work &amp; study in Madrid, Spain and Medellín, Colombia</span></div>
+          </div>
+          <div class="fact-card">
+            <div class="k">Languages</div>
+            <div class="v">Spanish (native)<span>English &amp; Italian (advanced) · Portuguese (working)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num mono">02</span>
+        <h2>What I Do</h2>
+      </div>
+      <div class="svc-grid">
+        <div class="svc"><div class="idx mono">01</div><h3>Paid Search</h3><p>Google Ads, Microsoft Ads and SA360 — keyword strategy, bid strategy, budget pacing, SQR analysis and account structure.</p></div>
+        <div class="svc"><div class="idx mono">02</div><h3>Paid Social</h3><p>Meta, TikTok and LinkedIn Ads — audience targeting, creative testing and full lifecycle management from setup to optimization.</p></div>
+        <div class="svc"><div class="idx mono">03</div><h3>Performance Strategy</h3><p>Translating a business goal into channel mix, campaign structure and budget allocation across search and social.</p></div>
+        <div class="svc"><div class="idx mono">04</div><h3>Tracking &amp; Measurement</h3><p>GA4, Google Tag Manager and Meta Pixel setup, so results are actually attributable, not assumed.</p></div>
+        <div class="svc"><div class="idx mono">05</div><h3>Campaign Optimization</h3><p>Smart Bidding, Performance Max and Meta Advantage+, plus ongoing creative and audience testing.</p></div>
+        <div class="svc"><div class="idx mono">06</div><h3>Reporting &amp; Analytics</h3><p>Looker Studio dashboards and client-facing reports built to inform the next budget decision, not just log the last one.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="platforms">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num mono">03</span>
+        <h2>Platforms &amp; Tools</h2>
+      </div>
+      <div class="plat-group">
+        <div class="gl">Advertising Platforms</div>
+        <div class="chips">
+          <span class="chip"><span class="sw" style="background:#4285F4"></span>Google Ads</span>
+          <span class="chip"><span class="sw" style="background:#0866FF"></span>Meta Ads</span>
+          <span class="chip"><span class="sw" style="background:#00A4EF"></span>Microsoft Advertising</span>
+          <span class="chip"><span class="sw" style="background:#E9551F"></span>SA360 (Search Ads 360)</span>
+          <span class="chip"><span class="sw" style="background:#111"></span>TikTok Ads</span>
+          <span class="chip"><span class="sw" style="background:#0A66C2"></span>LinkedIn Campaign Manager</span>
+          <span class="chip"><span class="sw" style="background:#A2AAAD"></span>Apple Search Ads</span>
+        </div>
+      </div>
+      <div class="plat-group">
+        <div class="gl">Analytics &amp; Tracking</div>
+        <div class="chips">
+          <span class="chip"><span class="sw" style="background:#E37400"></span>GA4</span>
+          <span class="chip"><span class="sw" style="background:#4285F4"></span>Looker Studio</span>
+          <span class="chip"><span class="sw" style="background:#246FDB"></span>Google Tag Manager</span>
+          <span class="chip"><span class="sw" style="background:#0866FF"></span>Meta Pixel</span>
+          <span class="chip"><span class="sw" style="background:#217346"></span>Advanced Excel</span>
+        </div>
+      </div>
+      <div class="plat-group">
+        <div class="gl">Optimization &amp; AI-assisted Workflow</div>
+        <div class="chips">
+          <span class="chip"><span class="sw" style="background:#4285F4"></span>Smart Bidding</span>
+          <span class="chip"><span class="sw" style="background:#4285F4"></span>Performance Max</span>
+          <span class="chip"><span class="sw" style="background:#0866FF"></span>Meta Advantage+</span>
+          <span class="chip"><span class="sw" style="background:#D97757"></span>ChatGPT / Claude</span>
+          <span class="chip"><span class="sw" style="background:#00C4CC"></span>Canva AI</span>
+        </div>
+      </div>
+      <div class="plat-group">
+        <div class="gl">Creative &amp; CMS</div>
+        <div class="chips">
+          <span class="chip"><span class="sw" style="background:#31A8FF"></span>Photoshop</span>
+          <span class="chip"><span class="sw" style="background:#FF9A00"></span>Illustrator</span>
+          <span class="chip"><span class="sw" style="background:#9999FF"></span>Premiere</span>
+          <span class="chip"><span class="sw" style="background:#111"></span>CapCut</span>
+          <span class="chip"><span class="sw" style="background:#95BF47"></span>Shopify</span>
+          <span class="chip"><span class="sw" style="background:#21759B"></span>WordPress</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num mono">04</span>
+        <h2>Experience</h2>
+      </div>
+
+      <div class="job">
+        <div>
+          <div class="when mono">MAR 2025 — PRESENT</div>
+          <div class="role">Paid Search Analyst</div>
+          <div class="org">Publicis Global Delivery (PGD) · Remote, Lima</div>
+          <span class="tag">Enterprise / Agency</span>
+        </div>
+        <ul>
+          <li>Manage and optimize paid search campaigns across Google Ads, Microsoft Ads and SA360.</li>
+          <li>Own budget pacing, bid strategy and account structure — sitelinks, ad copy, SQR analysis.</li>
+          <li>Turn performance data into client-facing reports that inform budget allocation and ongoing optimization.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div>
+          <div class="when mono">SEP 2023 — MAR 2025</div>
+          <div class="role">Paid Media Specialist — Freelance</div>
+          <div class="org">Upwork · International clients, Remote</div>
+          <span class="tag">28 Engagements · 100% JSS</span>
+        </div>
+        <ul>
+          <li>Delivered 28 completed engagements for clients across the US, Europe and Australia, primarily on Meta Ads with additional Google Ads execution.</li>
+          <li>Owned the full campaign lifecycle — setup, audience targeting, budget management, creative testing, optimization — for small businesses spanning insurance, real estate, coaching and local services.</li>
+          <li>Maintained a 100% Job Success score and repeat 5-star client feedback across the engagement history.</li>
+        </ul>
+      </div>
+
+      <details class="more-roles">
+        <summary>Earlier experience (5 roles) — Web Content, Meta Ads, Transfer Pricing &amp; more</summary>
+        <div class="more-job">
+          <div class="role">Web Content Manager Intern</div>
+          <div class="org">Alcampo (Auchan Holding) — Madrid, Spain</div>
+          <div class="when mono">FEB 2024 — SEP 2024</div>
+          <p>Managed e-commerce product content and supported nationwide digital &amp; promotional campaigns for a multinational retailer, alongside his Master's degree.</p>
+        </div>
+        <div class="more-job">
+          <div class="role">Paid Media Specialist (Meta Ads)</div>
+          <div class="org">Hispano-American Association of NLP — Lima, Peru</div>
+          <div class="when mono">MAR 2023 — AUG 2023</div>
+          <p>Planned and executed paid social campaigns on Facebook, Instagram and LinkedIn — the role that launched his paid media specialization.</p>
+        </div>
+        <div class="more-job">
+          <div class="role">Transfer Pricing Assistant</div>
+          <div class="org">EY — Lima, Peru</div>
+          <div class="when mono">NOV 2021 — FEB 2023</div>
+          <p>Financial analysis, benchmarking and documentation for intercompany transactions — the analytical foundation behind his approach to campaign reporting.</p>
+        </div>
+        <div class="more-job">
+          <div class="role">Marketing Intern</div>
+          <div class="org">Famen S.A. (Insurance Brokerage) — Lima, Peru</div>
+          <div class="when mono">OCT 2019 — SEP 2021</div>
+          <p>Supported marketing and customer engagement initiatives, managing customer data and sales messaging for acquisition and retention.</p>
+        </div>
+        <div class="more-job">
+          <div class="role">Volunteer Marketing Assistant</div>
+          <div class="org">Medellín Public Library System — Medellín, Colombia</div>
+          <div class="when mono">JUN 2019 — AUG 2019</div>
+          <p>Developed marketing campaigns and promotional strategies to grow public engagement.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="cases">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num mono">05</span>
+        <h2>Case Studies</h2>
+      </div>
+      <p class="sec-sub" style="margin-top:-16px; margin-bottom:28px;">Built only from what's verifiable on Gian's Upwork and LinkedIn history. Where a hard number isn't confirmed, it's flagged rather than estimated.</p>
+
+      <div class="cs">
+        <div class="cs-head">
+          <h3>Lead Generation — US Credit Services Company</h3>
+          <span class="cs-status mono">Freelance / Upwork</span>
+        </div>
+        <div class="cs-fields">
+          <div class="cs-field"><div class="k">Industry</div><div class="v">Credit services, USA</div></div>
+          <div class="cs-field"><div class="k">Objective</div><div class="v">Lead generation</div></div>
+          <div class="cs-field"><div class="k">Channel</div><div class="v">Paid social / search</div></div>
+          <div class="cs-field"><div class="k">Source</div><div class="v">Published Upwork portfolio</div></div>
+        </div>
+        <div class="cs-body">
+          <p>Published on Gian's Upwork portfolio as "Campaigns and Lead Gen to the Credit Service in USA," reflecting the same lead-generation, audience-targeting and campaign-management work he runs for other US-based service businesses.</p>
+        </div>
+        <div class="cs-note"><span class="flag mono">Missing:</span> the exact platforms used, campaign timeline, budget, and outcome metrics (leads generated, CPL, ROAS) aren't documented publicly. To turn this into a real case study, Gian would need to pull the original scope, spend and results from that engagement.</div>
+      </div>
+
+      <div class="cs">
+        <div class="cs-head">
+          <h3>Meta &amp; Facebook Ads for Solo &amp; Small-Team Service Businesses</h3>
+          <span class="cs-status mono">Freelance / Upwork · Recurring</span>
+        </div>
+        <div class="cs-fields">
+          <div class="cs-field"><div class="k">Industry</div><div class="v">Insurance, coaching, local US SMBs</div></div>
+          <div class="cs-field"><div class="k">Objective</div><div class="v">Lead gen + ads training</div></div>
+          <div class="cs-field"><div class="k">Channel</div><div class="v">Meta / Facebook / Instagram Ads</div></div>
+          <div class="cs-field"><div class="k">Source</div><div class="v">Multiple verified Upwork jobs</div></div>
+        </div>
+        <div class="cs-body">
+          <p>Across more than a dozen Upwork engagements — individual and multi-agent insurance teams, an NLP coaching business, a Texas-based small business — a clear segment emerges: solo and small-team US service businesses that need hands-on Meta Ads management, and often want to learn the platform themselves. Several clients specifically hired Gian as a "Meta Ads mentor" or trainer rather than only an operator, a distinct, repeatable service line.</p>
+          <p class="cs-quote">"He is talented and full of working strategies." <span class="mono" style="font-style:normal;">— verified Upwork client, insurance niche</span></p>
+        </div>
+        <div class="cs-note"><span class="flag mono">Missing:</span> aggregate before/after metrics (CTR, CPC, cost per lead) across these engagements aren't captured in the public review data. Gian would need to compile spend and results directly from these clients to quantify the pattern.</div>
+      </div>
+
+      <div class="cs">
+        <div class="cs-head">
+          <h3>Enterprise Paid Search Operations</h3>
+          <span class="cs-status mono">Publicis Global Delivery</span>
+        </div>
+        <div class="cs-fields">
+          <div class="cs-field"><div class="k">Scope</div><div class="v">Agency client (confidential)</div></div>
+          <div class="cs-field"><div class="k">Objective</div><div class="v">Search efficiency &amp; reporting</div></div>
+          <div class="cs-field"><div class="k">Channel</div><div class="v">Google Ads, Microsoft Ads, SA360</div></div>
+          <div class="cs-field"><div class="k">Source</div><div class="v">Current role</div></div>
+        </div>
+        <div class="cs-body">
+          <p>Ongoing management of paid search accounts inside a global agency network — budget pacing, bid strategy, account structure (sitelinks, ad copy) and search query report analysis, translated into client-facing reporting that informs budget decisions.</p>
+        </div>
+        <div class="cs-note"><span class="flag mono">Missing:</span> client name, spend level and performance figures are confidential under agency policy and can't be published here. If Gian's agreement allows a redacted, agency-approved metric (e.g. an efficiency % improvement), that would meaningfully strengthen this case.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num mono">06</span>
+        <h2>How He Works</h2>
+      </div>
+      <div class="approach">
+        <div class="ap-step"><div class="n">01</div><h4>Research</h4><p>Business goals, audience, competitive landscape.</p></div>
+        <div class="ap-step"><div class="n">02</div><h4>Strategy</h4><p>Channel mix, budget allocation, KPI targets.</p></div>
+        <div class="ap-step"><div class="n">03</div><h4>Setup</h4><p>Account structure, audiences, creative, tracking.</p></div>
+        <div class="ap-step"><div class="n">04</div><h4>Tracking</h4><p>GA4, GTM and pixel QA before a dollar is spent.</p></div>
+        <div class="ap-step"><div class="n">05</div><h4>Launch</h4><p>Phased rollout with early-signal monitoring.</p></div>
+        <div class="ap-step"><div class="n">06</div><h4>Optimization</h4><p>Bid, budget and audience adjustments against data.</p></div>
+        <div class="ap-step"><div class="n">07</div><h4>Testing</h4><p>Creative and audience A/B tests, run to significance.</p></div>
+        <div class="ap-step"><div class="n">08</div><h4>Reporting</h4><p>Plain-language readouts tied to the next decision.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num mono">07</span>
+        <h2>Education &amp; Certifications</h2>
+      </div>
+      <div class="edu-cert">
+        <div>
+          <div class="gl mono" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;">Education</div>
+          <div class="edu-item">
+            <div class="role">Master's Degree, Digital Marketing</div>
+            <div class="org">European University of Madrid (UEM), Spain</div>
+            <div class="when mono">OCT 2023 — JUL 2024</div>
+          </div>
+          <div class="edu-item">
+            <div class="role">Bachelor's Degree, Business Management</div>
+            <div class="org">Pontificia Universidad Católica del Perú</div>
+            <div class="when mono">2015 — 2020</div>
+          </div>
+          <div class="edu-item">
+            <div class="role">Specialization, Neuromarketing</div>
+            <div class="org">Centrum PUCP, Peru</div>
+            <div class="when mono">2023</div>
+          </div>
+          <div class="edu-item">
+            <div class="role">Facebook Ads and Google Ads</div>
+            <div class="org">Toulouse Lautrec, Peru</div>
+            <div class="when mono">2023</div>
+          </div>
+        </div>
+        <div>
+          <div class="gl mono" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:12px;">Active Certifications</div>
+          <div class="cert-item"><div><div class="name">Google Ads Search Certification</div><div class="issuer">Google</div></div><div class="date tnum">MAY '26 – MAY '27</div></div>
+          <div class="cert-item"><div><div class="name">Google Ads Video Certification</div><div class="issuer">Google</div></div><div class="date tnum">MAY '26 – MAY '27</div></div>
+          <div class="cert-item"><div><div class="name">Search Ads Certification</div><div class="issuer">Google</div></div><div class="date tnum">MAY '26 – MAY '27</div></div>
+          <div class="cert-item"><div><div class="name">AI-Powered Performance Max</div><div class="issuer">Google</div></div><div class="date tnum">MAY '26 – MAY '27</div></div>
+          <div class="cert-item"><div><div class="name">Microsoft Advertising Search Certification</div><div class="issuer">Microsoft Advertising</div></div><div class="date tnum">APR '26 – APR '27</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num mono">08</span>
+        <h2>Why Work With Me</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item"><div class="mk">01</div><div><h4>Search and social, one specialist</h4><p>Google Ads, Microsoft Ads, SA360, Meta, TikTok and LinkedIn — no coordinating separate vendors across channels.</p></div></div>
+        <div class="why-item"><div class="mk">02</div><div><h4>Agency rigor, independent delivery</h4><p>Trained inside a global agency network, and separately proven managing 28 client engagements solo, end to end.</p></div></div>
+        <div class="why-item"><div class="mk">03</div><div><h4>Reporting that gets read</h4><p>An analytical background from EY and a Master's in Digital Marketing behind every number.</p></div></div>
+        <div class="why-item"><div class="mk">04</div><div><h4>A verified track record</h4><p>100% Job Success across 28 completed Upwork engagements, with repeat 5-star feedback on communication.</p></div></div>
+        <div class="why-item"><div class="mk">05</div><div><h4>Built for distributed teams</h4><p>Native Spanish, advanced English and Italian, working Portuguese — experience across Peru, Spain and Colombia.</p></div></div>
+        <div class="why-item"><div class="mk">06</div><div><h4>Current on the platforms</h4><p>Active 2026 Google and Microsoft Advertising certifications, plus daily use of Performance Max and Advantage+.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Let's talk about your next campaign.</h2>
+        <p class="lede">Open to Paid Media / Performance Marketing roles — remote, across Europe, the US and Latin America — and to new freelance projects on Meta and Google Ads.</p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-row"><span class="k">Email</span><a href="mailto:gpalominoq@pucp.edu.pe">gpalominoq@pucp.edu.pe</a></div>
+        <div class="contact-row"><span class="k">Phone</span><span>+51 943 578 779</span></div>
+        <div class="contact-row"><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/gian-p-3818b015b/" target="_blank" rel="noopener">/in/gian-p-3818b015b</a></div>
+        <div class="contact-row"><span class="k">Upwork</span><a href="https://www.upwork.com/freelancers/~019e53375666251375" target="_blank" rel="noopener">View profile →</a></div>
+        <div class="contact-row"><span class="k">Location</span><span>Lima, Peru (GMT-5)</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>GIAN ALFREDO PALOMINO QUIROZ — PAID MEDIA / PERFORMANCE MARKETING</p>
+    <p>BUILT FROM VERIFIED CV, LINKEDIN &amp; UPWORK DATA</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('nav.links a').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      var el = document.querySelector(id);
+      if(el){
+        e.preventDefault();
+        el.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }
+    });
+  });
+</script>
+</body>
+</html>
